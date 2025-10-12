@@ -32,14 +32,16 @@ This section showcases my production-ready detection rules, each mapped to [MITR
 
 
 ```markdown
-detection-engineering/
-├── 03-initial-access/
-│   ├── t1078.001-default-accounts.kql
-│   ├── t1566.001-phishing-excelmacro.kql
-│   └── ...
-├── 09-collection/
-│   └── t1005-data-from-local-system.kql
-├── README.md
+├── detection-engineering/              # Standalone repo for production-ready detections
+│   │
+│   ├── sentinel/                       # KQL detection rules for Microsoft Sentinel
+│   │   ├── t1078.001-default-accounts.kql
+│   │   └── ... (other rules)
+│   │
+│   ├── defender/                       # Defender for Endpoint detection rules (future)
+│   │   └── ... (future)
+│   │
+│   └── readme.md  
 ```
 
 - Each subfolder matches a **MITRE tactic** (“03-initial-access”), and each detection file matches a **MITRE technique**.
