@@ -1,1 +1,4 @@
-// KQL
+DeviceNetworkEvents
+| where RemotePort in (21,22,23,80,443,3389) // Common scan targets
+| summarize scanCount = count() by RemoteIP, bin(TimeGenerated, 10m)
+| where scanCount > 1
