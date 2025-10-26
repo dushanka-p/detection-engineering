@@ -16,6 +16,11 @@
 
 ---
 
+Requirement:
+* Requires DeviceNetworkEvents enabled on endpoints.
+
+---
+
 ## 🛠️ Detection Engineering Workflow
 
 1. **Understand the Technique**
